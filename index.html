@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNSY2024</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Bodoni Moda', serif;
+            position: relative; /* Ensure the body element is a positioned container for the pseudo-element */
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars if the pseudo-element causes overflow */
+            display: flex; /* Enable Flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: #f0f0f0; /* Fallback color in case the image fails to load */
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('frs.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px); /* Apply blur effect here */
+            z-index: -1; /* Place the pseudo-element behind the content */
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #7393B3;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1; /* Ensure the container is above the blurred background */
+            
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            body::before {
+                filter: blur(2px); /* Reduce blur for smaller screens to maintain readability */
+            }
+
+            .container {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            input[type="text"], input[type="button"] {
+                font-size: 14px; /* Slightly smaller font size for better fit on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Passkey</h2>
+        <input type="text" id="passkey" placeholder="Enter passkey">
+        <input type="button" value="Submit" onclick="checkPasskey()">
+    </div>
+
+    <script>
+        function checkPasskey() {
+            //Des
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'dEsErI4202'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'des.html'; // Replace with your target URL
+            }
+            //Jona
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'jOnA4220'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'jon.html'; // Replace with your target URL
+            } 
+           //Chielo
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'chIElO4022'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'aus.html'; // Replace with your target URL
+            } 
+            //Cherylyn
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'AtEchE2240'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'che.html'; // Replace with your target URL
+            } 
+           //Jack
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'jAck2042'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'jack.html'; // Replace with your target URL
+            } 
+            //Elecel
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'ElEcEl2402'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'elecel.html'; // Replace with your target URL
+            } 
+            //Arianne
+            var passkey = document.getElementById('passkey').value;
+            var correctPasskey = 'ArIAnnE2420'; // Replace with your passkey
+
+            if (passkey === correctPasskey) {
+                window.location.href = 'arianne.html'; // Replace with your target URL
+            } 
+        }
+    </script>
+</body>
+</html>

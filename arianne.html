@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bodoni Moda', serif;
+}
+
+body {
+    height: 100vh;
+    background: #acb9e8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*text */
+.container {
+    
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px; /* Add padding to avoid content touching the edges */
+}
+
+.card {
+    width: 100%;
+    max-width: 280px;
+    height: 100%;
+    aspect-ratio: 7 / 9; /* Maintain aspect ratio */
+    transition: 2s;
+    transform-style: preserve-3d;
+    margin-bottom: 15px; /* Space between card and frames */
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.outside, .inside {
+    width: 100%;
+    height: 115%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.outside {
+    background-color: whitesmoke;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+}
+
+
+
+.inside {
+    background-color: #87CEEB;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+    border-radius: 20px;
+}
+
+.inside h4 {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.block {
+    padding: 20px;
+    height: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px; /* Space between card and block */
+    display: flex;
+    flex-direction: column; /* Stack frames vertically */
+    align-items: center;
+}
+
+.frames {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack frames vertically */
+    align-items: center;
+    margin: 10px 0; /* Space between individual frames */
+    box-shadow: pink;
+    transition: transform 0.3s ease; /* Smooth transition */
+    border-radius: 20px;
+    
+}
+
+.frames:hover {
+    transform: scale(1.3); /* Enlarge the frame on hover */
+}
+
+.frames img {
+    width: auto; /* Allow image to maintain its natural width */
+    height: auto; /* Allow image to maintain its natural height */
+    max-width: 100%; /* Ensure the image doesn’t overflow the frame */
+    border-radius: 10%;
+    box-shadow: blue;
+}
+
+.frames p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0; /* Margin to separate text from image */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .card {
+        width: 200%;
+        max-width: 300px;
+        aspect-ratio: 3 / 4; /* Adjust aspect ratio for smaller screens */
+    }
+
+    .outside h1 {
+        font-size: 1.5rem;
+    }
+
+    .inside h3 {
+        font-size: 0.9rem;
+    }
+
+    .frames img {
+        max-width: 80px; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .frames p {
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="outside">
+                
+                <h4>Hi! Arianne. Kumusta ka naman? HAHAHA Gusto ko lang sabihin na nakakapagpatibay ka. Every Saturday, kapag mag s-send sila ng pics. I'll look and I'll be like "Oh, nandito si Arianne". 
+                    Even on weekdays kapag vacation nakikita ko sa mga pictures kasama ka palagi sa house to house. Sinusulit mo talaga ang panahon para makapaglingkod.
+                     Nagsisikap ka kahit medyo malayo biyahe mo tuwing friday then lalabas ka for ministry sa 
+                    Saturday, kaya lagi kang mag-ingat sa pag drive. If I'm not mistaken auxilliary ka from June to September. Congrats! I'm sure masaya si Jehova sa ginawa mo.<br>
+                     HAPPY NEW SERVICE YEAR!
+                </h4>
+            </div>
+            <div class="inside">
+                <img src="Arianne/ar2.jpg"/>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="frames frame1">
+                <img src="Arianne/ar1.jpg" alt="">
+                <p>Wisdom is found in simplicity.
+                </p>
+            </div>
+            <div class="frames frame2">
+                <img src="Arianne/ar3.jpg" alt="">
+                <p>The Most Behave.
+                </p>
+            </div>
+            <div class="frames frame3">
+                <img src="Arianne/ar4.jpg">
+                <p>The best years of our lives is the one that we spend to serve Jehovah.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

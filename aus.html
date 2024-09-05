@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bodoni Moda', serif;
+}
+
+body {
+    height: 100vh;
+    background: #AFE1AF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*text */
+.container {
+    
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px; /* Add padding to avoid content touching the edges */
+}
+
+.card {
+    width: 280px;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 7 / 9; /* Maintain aspect ratio */
+    transition: 2s;
+    transform-style: preserve-3d;
+    margin-bottom: 10px; /* Space between card and frames */
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.outside, .inside {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.outside {
+    background-color: blanchedalmond;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+}
+
+
+
+.inside {
+    height: fit-content;
+    background-color: #7DF9FF;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+    border-radius: 20px;
+}
+
+.inside p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.block {
+    padding: 20px;
+    height: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px; /* Space between card and block */
+    display: flex;
+    flex-direction: column; /* Stack frames vertically */
+    align-items: center;
+}
+
+.frames {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack frames vertically */
+    align-items: center;
+    margin: 10px 0; /* Space between individual frames */
+    box-shadow: pink;
+    transition: transform 0.3s ease; /* Smooth transition */
+    border-radius: 20px;
+    
+}
+
+.frames:hover {
+    transform: scale(1.3); /* Enlarge the frame on hover */
+}
+
+.frames img {
+    width: auto; /* Allow image to maintain its natural width */
+    height: auto; /* Allow image to maintain its natural height */
+    max-width: 100%; /* Ensure the image doesn’t overflow the frame */
+    border-radius: 10%;
+    box-shadow: blue;
+}
+
+.frames p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0; /* Margin to separate text from image */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .card {
+        width: 200%;
+        max-width: 300px;
+        aspect-ratio: 3 / 4; /* Adjust aspect ratio for smaller screens */
+    }
+
+    .outside h1 {
+        font-size: 1.5rem;
+    }
+
+    .inside h3 {
+        font-size: 0.9rem;
+    }
+
+    .frames img {
+        max-width: 80px; /* Adjust image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .frames p {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="outside">
+                
+                <p>Hi Ate Chielo, kumusta ka  naman? I really like the way on how you explain things. At kung gaano ka kakalmado kahit ang gulo ng (tao) surroundings. 
+                    Marami kang goals pero si Jehova ang may alam kung saan ka pinaka kailangan. Don't feel down kung hindi mo naabot ang goal mo, always  remember na hindi humihiling 
+                    si Jehova ng higit sa makakaya natin dahil may limitasyon tayo. Pero kahit na ganoon, mahal ka parin niya at masayang masaya siya sa ginagawa mo. 
+                    Malakas ka nga sa kaniya  di'ba? HAHAHA Tapos na. <br>HAPPY NEW SERVICE YEAR!
+                </p>
+            </div>
+            <div class="inside">
+                <img src="Aus/au2.jpg"/>
+                
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="frames frame1">
+                <img src="Aus/au4.jpg" alt="">
+                <p>Always listen to other peoples stories and be a good listener.</p>
+            </div>
+            <div class="frames frame2">
+                <img src="Aus/au1.jpg" alt="">
+                <p>The Calm one.
+                </p>
+            </div>
+            <div class="frames frame3">
+                <img src="Aus/au3.jpg" alt="">
+                <p>Sky is not the limit, remember there's foot print's on the moon.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
